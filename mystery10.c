@@ -1,13 +1,10 @@
 #include <stdio.h>
 
-// Step 9 - use constants
-// At this point, it's clear that "t" is used to control what action the code
-// is taken
-// Instead of using magic numbers for "t", change to constants to make it
-// easier to follow what branch of the code is being executed in the next call
-// and what that branch of code does
-// Also use better names for the function parameters (still cryptic, but at
-// least now their order is apparent in their names)
+// Step 10 - simplify SWAP_VARIABLES
+// With the constants in place, we can see that when the code enter the
+// SWAP_VARIABLES branch, the third parameter is not used (it always uses)
+// the large string)
+// We can simplify the code based on that
 
 char *large_string =
     "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/"
@@ -40,18 +37,16 @@ f(p1, p2, p3) char *p3;
     }
 
     if (p1 == 2) {
-        int tmp1 = f(SWAP_VARIABLES, 0, p3 + 1);
-        int tmp2 = f(SWAP_VARIABLES, 1 - p2, tmp1 + p3);
-        f(SWAP_VARIABLES, -13, p3 + tmp2);
+        f(SWAP_VARIABLES, -13, 0);
     }
 
     // Swap p1 and p2
-    if (p1 < (SWAP_VARIABLES+1)) {
+    if (p1 < (SWAP_VARIABLES + 1)) {
         return f(p2, p1, large_string);
     }
 
     // Find p2 in p3 and print it
-    if (p1 < (ADVANCE_OR_PRINT+1)) {
+    if (p1 < (ADVANCE_OR_PRINT + 1)) {
         if (p2 == *p3) {
             return putchar(p3[31]);
         }
@@ -62,7 +57,7 @@ f(p1, p2, p3) char *p3;
         if (p1 < p2) {
             f(p1 + 1, p2, p3);
         }
-        if (f(SWAP_VARIABLES, -27 + p1, p3) && p1 == 2) {
+        if (f(SWAP_VARIABLES, -27 + p1, 0) && p1 == 2) {
             if (p2 < 13) {
                 return f(2, p2 + 1, "%s %d %d\n");
             }
