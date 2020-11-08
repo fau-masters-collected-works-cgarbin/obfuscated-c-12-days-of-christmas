@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-// Step 12 - remove branch that handles p1 == 1
-// The branch of code that handle p1 == 1 is hard-coded to call the function
-// again, just changing p1 to 2 - we can simply call the function the first
-// time with p1 set to 2
+// Step 13 - replace recursion to print character with a loop
+// The recursion in the ADVANCE_OR_PRINT branch is used only to advance the
+// pointer to the character we want to print - it can be replace with a simple
+// loop to make the code easier to follow
+// We can also rename ADVANCE_OR_PRINT or simply PRINT
 
 char *large_string =
     "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/"
@@ -17,7 +18,7 @@ char *small_string =
     "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,fxntdCeghiry";
 
 #define GOTO_TO_SLASH (0)
-#define ADVANCE_OR_PRINT (-51)
+#define PRINT (-51)
 
 f(p1, p2, p3) char *p3;
 {
@@ -26,7 +27,7 @@ f(p1, p2, p3) char *p3;
         if (*p3 == '/') {
             return 1;
         }
-        int tmp = f(ADVANCE_OR_PRINT, *p3, small_string);
+        int tmp = f(PRINT, *p3, small_string);
         return f(GOTO_TO_SLASH, tmp, p3 + 1);
     }
 
@@ -37,11 +38,9 @@ f(p1, p2, p3) char *p3;
     }
 
     // Find p2 in p3 and print it
-    if (p1 < (ADVANCE_OR_PRINT + 1)) {
-        if (p2 == *p3) {
-            return putchar(p3[31]);
-        }
-        return f(ADVANCE_OR_PRINT, p2, p3 + 1);
+    if (p1 < (PRINT + 1)) {
+        while (p2 != *p3) p3++;
+        return putchar(p3[31]);
     }
 
     if (p1 > 1) {
