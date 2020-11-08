@@ -20,7 +20,6 @@ char *small_string =
 
 f(p1, p2, p3) char *p3;
 {
-    // Called recursively until a "/" is found in p3
     if (p1 == PRINT_ONE_PIECE) {
         while (*p3 != '/') {
             char *p = small_string;
