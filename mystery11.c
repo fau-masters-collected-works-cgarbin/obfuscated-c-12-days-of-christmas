@@ -37,6 +37,8 @@ f(p1, p2, p3) char *p3;
     }
 
     if (p1 == 2) {
+        f(0, 0, large_string);
+        f(1 - p2, 0, large_string);
         f(-13, 0, large_string);
     }
 

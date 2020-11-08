@@ -37,6 +37,8 @@ f(p1, p2, p3) char *p3;
     }
 
     if (p1 == 2) {
+        f(SWAP_VARIABLES, 0, 0);
+        f(SWAP_VARIABLES, 1 - p2, 0);
         f(SWAP_VARIABLES, -13, 0);
     }
 

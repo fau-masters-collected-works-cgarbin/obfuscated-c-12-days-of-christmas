@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 12 - remove branch that handle p1 == 1
+// Step 12 - remove branch that handles p1 == 1
 // The branch of code that handle p1 == 1 is hard-coded to call the function
 // again, just changing p1 to 2 - we can simply call the function the first
 // time with p1 set to 2
@@ -31,6 +31,8 @@ f(p1, p2, p3) char *p3;
     }
 
     if (p1 == 2) {
+        f(0, 0, large_string);
+        f(1 - p2, 0, large_string);
         f(-13, 0, large_string);
     }
 
