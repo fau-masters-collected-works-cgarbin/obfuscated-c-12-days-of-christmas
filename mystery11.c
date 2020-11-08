@@ -18,18 +18,18 @@ char *large_string =
 char *small_string =
     "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,fxntdCeghiry";
 
-#define GOTO_TO_SLASH (0)
+#define GO_TO_SLASH (0)
 #define ADVANCE_OR_PRINT (-51)
 
 f(p1, p2, p3) char *p3;
 {
     // Called recursively until a "/" is found in p3
-    if (p1 == GOTO_TO_SLASH) {
+    if (p1 == GO_TO_SLASH) {
         if (*p3 == '/') {
             return 1;
         }
         int tmp = f(ADVANCE_OR_PRINT, *p3, small_string);
-        return f(GOTO_TO_SLASH, tmp, p3 + 1);
+        return f(GO_TO_SLASH, tmp, p3 + 1);
     }
 
     if (p1 == 1) {
