@@ -4,9 +4,6 @@
 // Change ?: to if/else to make it easier to follow
 //    A "?" becomes an "if"
 //    A ":" becomes an "else"
-// Also clean-up the comma operators, e.g. in the code below, the "3, " is not
-// used for anything, so can be removed:
-//   3, f(-94, -27 + t, a) &&t == 2
 
 char *large_string =
     "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/"
@@ -24,9 +21,13 @@ f(t, _, a) char *a;
      if (!0 < t) {
         if (t < 3) {
             f(-79, -13, a + f(-87, 1 - _, f(-86, 0, a + 1) + a));
+        } else {
+            1;
         }
         if (t < _) {
             f(t + 1, _, a);
+        } else {
+            3;
         }
         if (f(-94, -27 + t, a) && t == 2) {
             if (_ < 13) {

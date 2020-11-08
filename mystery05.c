@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-// Step 5 - improve if/else
+// Step 5 - make core more readable
 // Change some if statements to make them more readable
 //  1. if (!0 < t) --> change !0 to 1
 //  2. *a == '/' || f... --> split || into if/else
-//
-// Also split embbeded function calls into separate calls, e.g. f(..f())
-// becomes: tmp = f(); f(..tmp)
+//  3. Split embbeded function calls into separate calls, e.g. f(..f())
+//     becomes: tmp = f(); f(..tmp)
+//  4. Remove else branches that don't have executable code (just a number)
 
 char *large_string =
     "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/"
