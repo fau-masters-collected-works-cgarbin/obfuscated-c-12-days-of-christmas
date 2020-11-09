@@ -6,15 +6,19 @@
 // It is also clear now that the small string is acting as a cypher: a
 // character from the large string is translated into a character 31
 // positions ahead in the small string
+// The call to decode the text when p1 == 2 is also replaced with a direct
+// call to the decode function - this makes it clearer that p1 == 2 is the
+// initialization code for the program
+// At this point, with the code pretty much reworked, it was also changed
+// to modern C, e.g. declare function types, etc.
 
 char *large_string =
-    "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/"
-    "#\;#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l "
-    "\q#'+d'K#!/+k#;q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' "
-    "i;# \){nl]!/n{n#'; r{#w'r nc{nl]'/#{l,+'K {rw' iK{;[{nl]'/w#q#n'wk nw' "
-    "\iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c "
-    "\;;{nl'-{}rw]'/+,}##'*}#nc,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+}{rl#'{n' "
-    "')# \}'+}##(!!/";
+    "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+"
+    ",/#\;#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l \q#'+d'K#!/+k#;q#"
+    "'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' i;# \){nl]!/n{n"
+    "#'; r{#w'r nc{nl]'/#{l,+'K {rw' iK{;[{nl]'/w#q#n'wk nw' \iwk{KK{nl]!/w"
+    "{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \;;{nl'-{}rw]'/+,}##'*}#n"
+    "c,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+}{rl#'{n' ')# \}'+}##(!!/";
 char *small_string =
     "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,fxntdCeghiry";
 
@@ -29,7 +33,7 @@ void decode_text(char* text) {
     }
 }
 
-f(p1, p2, p3) char *p3;
+int f(int p1, int p2, char* p3)
 {
     if (p1 == PRINT_ONE_PIECE) {
         decode_text(p3);
@@ -37,7 +41,7 @@ f(p1, p2, p3) char *p3;
     }
 
     if (p1 == 2) {
-        f(PRINT_ONE_PIECE, 0, large_string);
+        decode_text(large_string);
         f(1 - p2, 0, large_string);
         f(-13, 0, large_string);
     }
