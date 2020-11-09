@@ -9,6 +9,7 @@
 // The call to decode the text when p1 == 2 is also replaced with a direct
 // call to the decode function - this makes it clearer that p1 == 2 is the
 // initialization code for the program
+// Finally, if we move the "p1 < 0" code up, we can remove the "p1 > 1" test
 // At this point, with the code pretty much reworked, it was also changed
 // to modern C, e.g. declare function types, etc.
 

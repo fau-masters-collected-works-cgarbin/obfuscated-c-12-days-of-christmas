@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Step 12 - remove branch that handles p1 == 1
-// The branch of code that handle p1 == 1 is hard-coded to call the function
+// The branch of code that handles p1 == 1 is hard-coded to call the function
 // again, just changing p1 to 2 - we can simply call the function the first
 // time with p1 set to 2
 

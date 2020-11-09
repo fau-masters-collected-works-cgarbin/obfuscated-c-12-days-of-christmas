@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-// Step 13 - replace recursion to print character with a loop
+// Step 13 - replace recursion to print characters with a loop
 // The recursion in the ADVANCE_OR_PRINT branch is used only to advance the
-// pointer to the character we want to print - it can be replace with a simple
+// pointer to the character we want to print - it can be replaced with a simple
 // loop to make the code easier to follow
-// We can also rename ADVANCE_OR_PRINT or simply PRINT
+// We can also rename ADVANCE_OR_PRINT to simply PRINT
 
 char *large_string =
     "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+"
