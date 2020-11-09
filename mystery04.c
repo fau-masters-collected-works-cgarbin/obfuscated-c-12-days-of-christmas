@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 4 - make more readable
+// Step 4 - make the code  structure more visible with if/else
 // Change ?: to if/else to make it easier to follow
 //    A "?" becomes an "if"
 //    A ":" becomes an "else"
@@ -37,8 +37,7 @@ f(t, _, a) char *a;
         } else {
             return 16;
         }
-    }
-    else {
+    } else {
         if (t < 0) {
             if (t < -72) {
                 return f(_, t, large_string);
@@ -64,9 +63,8 @@ f(t, _, a) char *a;
 }
 
 int main(int argc, char *argv[]) {
-    // The original program ("main(t,_,a)) makes a decision based on "t", which
-    // is argc When called with no arguments, argc == 1, so we emulate that by
-    // calling the new function once with 1 as the first parameter to get it
-    // started
+    // The original program ("main(t,_,a)) makes a decision based on "t", which is argc
+    // When called with no arguments, argc == 1, so we emulate that by calling
+    // the new function once with 1 as the first parameter to get it started
     f(1, 0, 0);
 }

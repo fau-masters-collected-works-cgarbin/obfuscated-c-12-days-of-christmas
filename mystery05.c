@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 5 - make core more readable
+// Step 5 - make code more readable
 // Change some if statements to make them more readable
 //  1. if (!0 < t) --> change !0 to 1
 //  2. *a == '/' || f... --> split || into if/else
@@ -69,9 +69,8 @@ f(t, _, a) char *a;
 }
 
 int main(int argc, char *argv[]) {
-    // The original program ("main(t,_,a)) makes a decision based on "t", which
-    // is argc When called with no arguments, argc == 1, so we emulate that by
-    // calling the new function once with 1 as the first parameter to get it
-    // started
+    // The original program ("main(t,_,a)) makes a decision based on "t", which is argc
+    // When called with no arguments, argc == 1, so we emulate that by calling
+    // the new function once with 1 as the first parameter to get it started
     f(1, 0, 0);
 }

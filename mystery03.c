@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 3 - improve formatting
+// Step 3 - improve formatting (pretty printing)
 // Indent the ?: operators to see the overall flow of the code
 
 char *large_string =
@@ -52,9 +52,8 @@ f(t, _, a) char *a;
 }
 
 int main(int argc, char *argv[]) {
-    // The original program ("main(t,_,a)) makes a decision based on "t", which
-    // is argc When called with no arguments, argc == 1, so we emulate that by
-    // calling the new function once with 1 as the first parameter to get it
-    // started
+    // The original program ("main(t,_,a)) makes a decision based on "t", which is argc
+    // When called with no arguments, argc == 1, so we emulate that by calling
+    // the new function once with 1 as the first parameter to get it started
     f(1, 0, 0);
 }
