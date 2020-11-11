@@ -55,7 +55,7 @@ int f(int p1, int p2) {
 
     if (p1 < p2) {
         f(p1 + 1, p2);
-     }
+    }
 
     move_to_segment_and_decode(27 - p1);
 
