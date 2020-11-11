@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 17 - the final version
+// Step 17 - split functional blocks
 // This version splits out of the main loop the functions that decode and
 // and print a specific piece of the text.
 // The main function now has only the logic.
