@@ -15,7 +15,7 @@ char *encoded_text =
 
 char *cypher =
     "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:"
-   "\nuwloca-O;m .vpbks,fxntdCeghiry";
+    "\nuwloca-O;m .vpbks,fxntdCeghiry";
 
 void decode_text(char *text) {
     while (*text != '/') {
@@ -43,11 +43,23 @@ void print_day_preamble(int day) {
     move_to_segment_and_decode(13);
 }
 
-int main(int argc, char *argv[]) {
-    for (int day = 1; day < 13; day++) {
-        print_day_preamble(day);
-        for (int i = day + 1; i >= 2; i--) {
-            move_to_segment_and_decode(27 - i);
-        }
+int f(int p1, int p2) {
+    if (p1 == 2) {
+        print_day_preamble(p2 - 1);
     }
+
+    if (p1 < p2) {
+        f(p1 + 1, p2);
+    }
+
+    move_to_segment_and_decode(27 - p1);
+
+    if (p1 == 2 && p2 < 13) {
+        f(2, p2 + 1);
+    }
+}
+
+int main(int argc, char *argv[]) {
+    // Call with the value that kicks off the code (2)
+    f(2, 2);
 }
