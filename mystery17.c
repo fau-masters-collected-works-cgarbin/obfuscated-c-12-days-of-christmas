@@ -43,7 +43,7 @@ void print_day_preamble(int day) {
     move_to_segment_and_decode(13);
 }
 
-int f(int p1, int p2, char *p3) {
+int f(int p1, int p2) {
     if (p1 == 2) {
         print_day_preamble(p2 - 1);
     }
@@ -54,17 +54,19 @@ int f(int p1, int p2, char *p3) {
     }
 
     if (p1 < p2) {
-        f(p1 + 1, p2, p3);
-    }
+        f(p1 + 1, p2);
+     }
 
-    if (f(-27 + p1, 0, encoded_text) && p1 == 2) {
+    move_to_segment_and_decode(27 - p1);
+
+    if (p1 == 2) {
         if (p2 < 13) {
-            return f(2, p2 + 1, 0);
+            return f(2, p2 + 1);
         }
     }
 }
 
 int main(int argc, char *argv[]) {
     // Call with the value that kicks off the code (2)
-    f(2, 2, 0);
+    f(2, 2);
 }
