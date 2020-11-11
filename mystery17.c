@@ -43,22 +43,11 @@ void print_day_preamble(int day) {
     move_to_segment_and_decode(13);
 }
 
-int f(int p1, int p2) {
-    if (p1 == 2) {
-        print_day_preamble(p2 - 1);
-    }
-
-    for (int i = p2; i >= 2; i--)
-    {
-        move_to_segment_and_decode(27 - i);
-    }
-
-    if (p2 < 13) {
-        f(2, p2 + 1);
-    }
-}
-
 int main(int argc, char *argv[]) {
-    // Call with the value that kicks off the code (2)
-    f(2, 2);
+    for (int day = 1; day < 13; day++) {
+        print_day_preamble(day);
+        for (int i = day + 1; i >= 2; i--) {
+            move_to_segment_and_decode(27 - i);
+        }
+    }
 }
