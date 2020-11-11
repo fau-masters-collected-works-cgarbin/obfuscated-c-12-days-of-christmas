@@ -48,13 +48,12 @@ int f(int p1, int p2) {
         print_day_preamble(p2 - 1);
     }
 
-    if (p1 < p2) {
-        f(p1 + 1, p2);
+    for (int i = p2; i >= 2; i--)
+    {
+        move_to_segment_and_decode(27 - i);
     }
 
-    move_to_segment_and_decode(27 - p1);
-
-    if (p1 == 2 && p2 < 13) {
+    if (p2 < 13) {
         f(2, p2 + 1);
     }
 }
