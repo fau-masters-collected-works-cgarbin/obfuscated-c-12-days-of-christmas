@@ -5,12 +5,12 @@ rm "*.output" >/dev/null 2>&1
 
 # The output from the original code
 # All code refactoring steps must match this output
-
 echo "Saving original text"
 gcc phillipps.c >/dev/null 2>&1
 ./a.out > original
 
-for file in *.c; do
+# Compare the output of all steps to the original output
+for file in phillipps-step*.c; do
     echo "Testing $file"
 
     rm "a.out" >/dev/null 2>&1 # to catch compilation errors
