@@ -44,13 +44,13 @@ char *encoded_text =
     "{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \;;{nl'-{}rw]'/+,}##'*}#n"
     "c,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+}{rl#'{n' ')# \}'+}##(!!/";
 
-char *cypher =
+char *cipher =
     "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:"
     "\nuwloca-O;m .vpbks,fxntdCeghiry";
 
 void decode_text(char *text) {
     while (*text != '/') {
-        char *p = cypher;
+        char *p = cipher;
         while (*text != *p) p++;
         putchar(p[31]);
         text++;
