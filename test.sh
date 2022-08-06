@@ -4,7 +4,7 @@
 rm "*.output" >/dev/null 2>&1
 
 # The output from the original code
-# All transformatons must match this output
+# All code refactoring steps must match this output
 
 echo "Saving original text"
 gcc phillipps.c >/dev/null 2>&1
