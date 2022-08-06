@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 16 - split out code that prints a piece of text
+// Step 15 - split out code that prints a piece of text
 // To help see the logic of the main function, the code that prints one piece
 // of text is moved to its own function
 // It is also clear now that the small string is acting as a cypher: a

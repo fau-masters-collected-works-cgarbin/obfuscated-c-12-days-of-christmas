@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 10 - simplify SWAP_VARIABLES
+// Step 9 - simplify SWAP_VARIABLES
 // With the constants in place, we can see that when the code enters the
 // SWAP_VARIABLES branch, the third parameter is not used (it always uses
 // the large string)

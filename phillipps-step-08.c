@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 9 - use constants
+// Step 8 - use constants
 // At this point, it's clear that "t" is used to control what action the code
 // is taking
 // Instead of using magic numbers for "t", change to constants to make it

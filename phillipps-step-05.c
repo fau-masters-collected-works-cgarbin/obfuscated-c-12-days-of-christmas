@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 6 - simplify "else" branches
+// Step 5 - simplify "else" branches
 // Because most of the if/else constructs have “return” in them, we can remove
 // some of the “else” branches, “promoting” their code to a higher level, which
 // makes the decision paths easier to follow.

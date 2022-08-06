@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 11 - eliminate SWAP_VARIABLES
+// Step 10 - eliminate SWAP_VARIABLES
 // After simplifying SWAP_VARIABLES, it becomes clear that it is just a
 // misdirection - it can be replaced with direct calls to the function, with
 // the variables already swapped

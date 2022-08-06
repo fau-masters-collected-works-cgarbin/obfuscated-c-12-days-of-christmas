@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 15 - combine printing code
+// Step 14 - combine printing code
 // The code that prints one character is called from only one place (from the
 // block of code that prints a piece of text)
 // To simplify the flow, that code is moved into the place that calls it

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 8 - rearrange if statements
+// Step 7 - rearrange if statements
 // Rearrange the if statements in increasing numeric order to make it easier
 // to follow paths in the code
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 18 - the final version
+// Step 17 - the final version
 // This version replaces the recursive calls with loops
 
 char *encoded_text =

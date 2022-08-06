@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 5 - make code more readable
+// Step 4 - make code more readable
 // Change some if statements to make them more readable
 //  1. if (!0 < t) --> change !0 to 1
 //  2. *a == '/' || f... --> split || into if/else

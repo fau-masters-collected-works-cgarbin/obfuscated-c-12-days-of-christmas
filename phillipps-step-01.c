@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 2 - separate data from code
+// Step 1 - separate data from code
 // Because we don't know what the strings do, we will use generic names for now
 
 char *large_string =

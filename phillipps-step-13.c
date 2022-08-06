@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 14 - improve GO_TO_SLASH
+// Step 13 - improve GO_TO_SLASH
 // After improving the (new) PRINT, it is clearer now that GO_TO_SLASH is not
 // only going to a slash, but printing each character along the way
 // To make it easier to follow, the recursion is replaced with a loop

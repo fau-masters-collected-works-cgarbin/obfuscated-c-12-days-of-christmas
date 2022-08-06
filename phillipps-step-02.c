@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 3 - improve formatting (pretty printing)
+// Step 2 - improve formatting (pretty printing)
 // Indent the ?: operators to see the overall flow of the code
 
 char *large_string =

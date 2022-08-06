@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 7 - simplify decision paths
+// Step 6 - simplify decision paths
 // Some of the decision paths are redundant. For example, in the code:
 //    if (t < 0) {
 //        if (t < -72) {

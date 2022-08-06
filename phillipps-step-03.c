@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 4 - make the code  structure more visible with if/else
+// Step 3 - make the code  structure more visible with if/else
 // Change ?: to if/else to make it easier to follow
 //    A "?" becomes an "if"
 //    A ":" becomes an "else"

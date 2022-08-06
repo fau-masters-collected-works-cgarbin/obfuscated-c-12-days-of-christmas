@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Step 13 - replace recursion to print characters with a loop
+// Step 12 - replace recursion to print characters with a loop
 // The recursion in the ADVANCE_OR_PRINT branch is used only to advance the
 // pointer to the character we want to print - it can be replaced with a simple
 // loop to make the code easier to follow
