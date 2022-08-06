@@ -313,7 +313,7 @@ f(p1, p2, p3) char *p3;
 | -------------------------------------------- | -------------------------------------------- |
 | [phillipps-step-07.c](./phillipps-step-07.c) | [phillipps-step-08.c](./phillipps-step-08.c) |
 
-## Setp 9 - Simplify `SWAP_VARIABLES`
+## Step 9 - simplify `SWAP_VARIABLES`
 
 With the constants in place, we can see that when the code enters the `SWAP_VARIABLES` branch, the third parameter is not used:
 
@@ -592,3 +592,16 @@ int main(int argc, char *argv[]) {
 | Starting point                               | New code                                     |
 | -------------------------------------------- | -------------------------------------------- |
 | [phillipps-step-16.c](./phillipps-step-16.c) | [phillipps-step-17.c](./phillipps-step-17.c) |
+
+## How do you know the code still works?
+
+Good question. Before embarking on a code refactoring activity like this, we need a plan to prove that we are not changing the code's behavior. Note the carefully chosen words: we are not trying to prove that the code works. We are just ensuring that we are not changing what it does when modifying it. Proving that the code works is a different topic.
+
+Proving that we are not modifying the behavior of the code has two parts:
+
+1. Capture the behavior of the code before we modify it.
+1. Compare the new code's behavior with the old code's behavior.
+
+In our case, for step one we can simply save the output of the code into a file. Then, for step two we capture the output of the new code into a file and compare the two files.
+
+The [test script](./test.sh) automates that process.
