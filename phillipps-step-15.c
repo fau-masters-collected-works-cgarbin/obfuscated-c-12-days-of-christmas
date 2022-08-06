@@ -3,7 +3,7 @@
 // Step 15 - split out code that prints a piece of text
 // To help see the logic of the main function, the code that prints one piece
 // of text is moved to its own function
-// It is also clear now that the small string is acting as a cypher: a
+// It is also clear now that the small string is acting as a cipher: a
 // character from the large string is translated into a character 31
 // positions ahead in the small string
 // The call to decode the text when p1 == 2 is also replaced with a direct
