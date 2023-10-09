@@ -5,7 +5,7 @@ This repository explains how to methodically "unobfuscate" the winning [1988 Int
 
 Following the "obfuscation" theme, entries are identified by the author's name. Later this program became known as the "Twelve Days of Christmas", which already hints at what it does. For a while, it circulated widely and even became the [example in a paper about code analysis](https://dl.acm.org/doi/10.1145/318774.318944) (which also decodes it -- it's a great read).
 
-We will methodically modify the code until it becomes intelligible C code. Some of the steps could be combined into one step. However, the intention is to make one change at a time to see how each transformation makes the code better and also to backtrack only one change, in case it doesn't work (as it happens in real life example -- a good rule of thumb for experiments and research is "make one change at a time").
+We will methodically modify the code until it becomes intelligible C code. Some of the steps could be combined into one step. However, the intention is to make one change at a time to see how each transformation makes the code better and also to backtrack only one change, in case it doesn't work (as it happens in real-life examples -- a good rule of thumb for experiments and research is "make one change at a time").
 
 We will start with this:
 
@@ -87,9 +87,9 @@ int main(int argc, char *argv[]) {
 
 ## The original code
 
-The starting point is the [original code, modified to work with a modern C compiler](./phillipps01.c). You should be able to compile it with `gcc` and run it with `./a.out`. It will (incredibly) print the [Twelve Days of Christmas song](https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)).
+The starting point is the [original code, modified to work with a modern C compiler](./phillipps.c). You should be able to compile it with `gcc` and run it with `./a.out`. It will (incredibly) print the [Twelve Days of Christmas song](https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)).
 
-Compiling the code will result in several warnings because of the intentional convoluted style but no errors. Despite the warnings, it's a perfectly legal piece of C code.
+Compiling the code will result in several warnings because of the intentionally convoluted style but no errors. Despite the warnings, it's a perfectly legal piece of C code.
 
 ```bash
 $ gcc phillipps01.c
@@ -170,7 +170,7 @@ To code like this:
 In this step we make the code more readable with the following changes:
 
 1. Replace the test `if (!0 < t)` with the more traditional `if (t > 1)`.
-1. Replace the implicit `if` from the short-circuit evaluation `*a == '/' || f...` into an explicit if/else.
+1. Replace the implicit `if` from the short-circuit evaluation `*a == '/' || f...` with an explicit if/else.
 1. Split embedded function calls into separate calls.
 1. Remove `else` branches that don't executable code, just numbers.
 
